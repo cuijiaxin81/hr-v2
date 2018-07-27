@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--设置视口，只在移动端浏览器下生效，设置视口宽度=当前手机设备宽度，默认缩放1，用户不允许手动缩放-->
+		<meta name="viewport" content="width=width-device,initial-scale=1.0,user-scalable=no"/>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--引入bootstrap的核心css-->
+		<link rel="stylesheet" href="js/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="js/swiper/swiper.min.css" />
+	</head>
+	<body>
+		
+		<div class="container">
+			
+			<ol class="breadcrumb">
+				<li><a href="#">人力资源管理系统</a></li>						
+				<li>主页</li>
+			</ol>					
+			
+			<div class="swiper-container col-xs-6">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="images/lunbo_1.jpg" class="img-responsive"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/lunbo_2.jpg" class="img-responsive"/>
+					</div>
+					<div class="swiper-slide">
+						<img src="images/lunbo_3.jpg" class="img-responsive"/>
+					</div>
+				</div>		
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>		
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+			
+		</div>
+		
+		<!--引入jquery-->
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<!--引入全局js-->
+		<script src="js/global.js"></script>
+		<!--引入bootstrap.js，实现js功能-->
+		<script type="text/javascript" src="js/bootstrap/js/bootstrap.js" ></script>
+		<!--引入layer层-->
+		<script src="js/layer/layer.js"></script>
+		<!--引入轮播图js-->
+		<script src="js/swiper/swiper.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				
+				//轮播图
+				var mySwiper = new Swiper('.swiper-container',{
+					loop: true,
+					autoplay: 3000,
+					pagination: '.swiper-pagination',
+					nextButton: '.swiper-button-next',
+					prevButton: '.swiper-button-prev',
+					paginationClickable: true,
+					autoplayDisableOnInteraction: false
+				});
+								
+			});			
+		</script>
+	</body>
+</html>
